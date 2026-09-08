@@ -1,0 +1,192 @@
+{% extends "base.html" %}
+
+{% block title %}
+ShareBite | Food Sharing Portal
+{% endblock %}
+
+{% block content %}
+
+<!-- HERO SECTION -->
+<section class="hero-section">
+
+    <div class="container">
+        <div class="row align-items-center min-vh-75">
+
+            <div class="col-lg-7">
+
+                <span class="hero-small-title">
+                    SHARE FOOD • SPREAD HOPE
+                </span>
+
+                <h1>
+                    Don't Waste Food,
+                    <span>Share It.</span>
+                </h1>
+
+                <p class="hero-description">
+                    A community food sharing platform connecting
+                    restaurants and food donors with NGOs and
+                    beneficiaries. Together, we can reduce food
+                    waste and help people in need.
+                </p>
+
+                <div class="hero-buttons">
+                    
+                    <a href="{{ url_for('donate_food') }}" class="btn donate-btn">
+                        Donate Food
+                    </a>
+                    
+                    <a href="{{ url_for('food_list') }}" class="btn find-food-btn">
+                        Find Food
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+
+<!-- ABOUT SECTION -->
+<section class="about-section" id="about">
+
+    <div class="container text-center">
+
+        <p class="section-label">OUR MISSION</p>
+
+        <h2>Food Should Feed People, Not Landfills</h2>
+
+        <p class="section-description">
+            Every day, good food is wasted while many people struggle
+            to get enough to eat. ShareBite creates a simple
+            connection between those who have surplus food and those
+            who can distribute it to people in need.
+        </p>
+
+
+        <div class="row mt-5 g-4">
+
+            <div class="col-md-4">
+                <div class="mission-card">
+
+                    <div class="card-number">01</div>
+
+                    <h4>Reduce Food Waste</h4>
+
+                    <p>
+                        Help restaurants and food donors prevent
+                        perfectly good surplus food from being wasted.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="mission-card">
+
+                    <div class="card-number">02</div>
+
+                    <h4>Support Communities</h4>
+
+                    <p>
+                        Make surplus food available to NGOs and
+                        beneficiaries who can distribute it where
+                        it is needed.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="mission-card">
+
+                    <div class="card-number">03</div>
+
+                    <h4>Build Connections</h4>
+
+                    <p>
+                        Bring donors, restaurants, NGOs and
+                        communities together through one simple
+                        platform.
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- HOW IT WORKS -->
+<section class="how-section" id="how-it-works">
+
+    <div class="container text-center">
+
+        <p class="section-label">SIMPLE PROCESS</p>
+
+        <h2>How It Works</h2>
+
+        <div class="row mt-5 g-4">
+
+            <div class="col-md-4">
+                <div class="step-box">
+
+                    <span>1</span>
+
+                    <h4>Post Surplus Food</h4>
+
+                    <p>
+                        Restaurants or donors provide details about
+                        the food they have available.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="step-box">
+
+                    <span>2</span>
+
+                    <h4>NGOs Find Food</h4>
+
+                    <p>
+                        NGOs and beneficiaries browse available
+                        food donations in their community.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="step-box">
+
+                    <span>3</span>
+
+                    <h4>Collect & Share</h4>
+
+                    <p>
+                        A request is made, the food is collected,
+                        and it reaches people who need it.
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

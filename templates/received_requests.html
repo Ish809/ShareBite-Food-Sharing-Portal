@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+
+{% block title %}
+Received Requests | ShareBite
+{% endblock %}
+
+{% block content %}
+
+<section class="about-section">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <p class="section-label">
+                DONATION REQUESTS
+            </p>
+
+            <h2>Received Food Requests</h2>
+
+            <p class="section-description">
+                Review requests made for your food donations.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            {% if requests %}
+
+                {% for item in requests %}
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="mission-card h-100">
+
+                        <h4>{{ item[1] }}</h4>
+
+                        <p>
+                            <strong>Quantity:</strong>
+                            {{ item[2] }}
+                        </p>
+
+                        <p>
+                            <strong>Location:</strong>
+                            {{ item[3] }}
+                        </p>
+
+                        <p>
+                            <strong>Requested By:</strong>
+                            {{ item[4] }}
+                        </p>
+
+                        <p>
+                            <strong>Status:</strong>
+                            {{ item[5] }}
+                        </p>
+
+
+                        {% if item[5] == "Pending" %}
+
+                        <a
+                            href="{{ url_for('update_request', request_id=item[0], status='Accepted') }}"
+                            class="btn btn-success me-2"
+                        >
+                            Accept
+                        </a>
+
+                        <a
+                            href="{{ url_for('update_request', request_id=item[0], status='Rejected') }}"
+                            class="btn btn-danger"
+                        >
+                            Reject
+                        </a>
+
+                        {% endif %}
+
+                    </div>
+
+                </div>
+
+                {% endfor %}
+
+            {% else %}
+
+                <div class="col-12 text-center">
+
+                    <div class="mission-card">
+
+                        <h4>No Requests Yet</h4>
+
+                        <p>
+                            Requests for your food donations will appear here.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

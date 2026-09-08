@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+
+{% block title %}
+Register | ShareBite
+{% endblock %}
+
+{% block content %}
+
+<section class="auth-section">
+
+    <div class="container">
+
+        <div class="auth-card">
+
+            <div class="text-center mb-4">
+
+                <p class="section-label">JOIN SHAREBITE</p>
+
+                <h2>Create Your Account</h2>
+
+                <p class="auth-subtitle">
+                    Join our community and help reduce food waste.
+                </p>
+
+            </div>
+
+
+            <form method="POST">
+
+                <div class="mb-3">
+                    <label class="form-label">Full Name</label>
+                    
+                    <input
+                        type="text"
+                        name="fullname"
+                        class="form-control"
+                        placeholder="Enter your full name"
+                        required
+                    >
+                </div>
+
+
+                <div class="mb-3">
+                    <label class="form-label">Email Address</label>
+
+                    <input
+                        type="email"
+                        name="email"
+                        class="form-control"
+                        placeholder="Enter your email"
+                        required
+                    >
+                </div>
+
+
+                <div class="mb-3">
+                    <label class="form-label">Phone Number</label>
+
+                    <input
+                        type="text"
+                        name="phone"
+                        class="form-control"
+                        placeholder="Enter your phone number"
+                        required
+>
+                </div>
+
+
+                <div class="mb-3">
+
+                    <label class="form-label">
+                        Register As
+                    </label>
+
+                    <select name="role" class="form-select" required>
+                        
+                        <option value="" selected disabled>
+                            Select account type
+                        </option>
+                        
+                        <option value="donor">
+                            Restaurant / Food Donor
+                        </option>
+                        
+                        <option value="ngo">
+                            NGO / Beneficiary
+                        </option>
+                    
+                    </select>
+
+                </div>
+
+
+                <div class="mb-3">
+
+                    <label class="form-label">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        name="password"
+                        class="form-control"
+                        placeholder="Create a password"
+                        required
+                    >
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn auth-btn w-100"
+                >
+                    Create Account
+                </button>
+
+
+                <p class="text-center auth-bottom-text">
+
+                    Already have an account?
+
+                    <a href="{{ url_for('login') }}">
+                        Login
+                    </a>
+
+                </p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block title %}
+Login | ShareBite
+{% endblock %}
+
+{% block content %}
+
+<section class="auth-section">
+
+    <div class="container">
+
+        <div class="auth-card">
+
+            <div class="text-center mb-4">
+
+                <p class="section-label">WELCOME BACK</p>
+
+                <h2>Login to ShareBite</h2>
+
+                <p class="auth-subtitle">
+                    Continue sharing food and supporting your community.
+                </p>
+
+            </div>
+
+            <form method="POST">
+
+                <div class="mb-3">
+
+                    <label class="form-label">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        name="email"
+                        class="form-control"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="mb-3">
+
+                    <label class="form-label">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        name="password"
+                        class="form-control"
+                        placeholder="Enter your password"
+                        required
+                    >
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn auth-btn w-100"
+                >
+                    Login
+                </button>
+
+
+                <p class="text-center auth-bottom-text">
+
+                    Don't have an account?
+
+                    <a href="{{ url_for('register') }}">
+                        Register
+                    </a>
+
+                </p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

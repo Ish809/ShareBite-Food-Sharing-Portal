@@ -1,0 +1,312 @@
+/* -------------------------
+   GENERAL
+-------------------------- */
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #26352b;
+    background-color: #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 700;
+}
+
+.min-vh-75 {
+    min-height: 75vh;
+}
+
+
+/* -------------------------
+   NAVBAR
+-------------------------- */
+
+.custom-navbar {
+    background-color: #174d32;
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-size: 22px;
+}
+
+.navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.88);
+    margin: 0 7px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffffff;
+}
+
+.register-btn {
+    background-color: #f2b84b;
+    color: #173326;
+    font-weight: 600;
+    border: none;
+}
+
+.register-btn:hover {
+    background-color: #dda83e;
+}
+
+
+/* -------------------------
+   HERO
+-------------------------- */
+
+.hero-section {
+    background:
+        linear-gradient(
+            rgba(15, 58, 37, 0.91),
+            rgba(15, 58, 37, 0.91)
+        );
+    color: white;
+}
+
+.hero-small-title {
+    color: #f2b84b;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero-section h1 {
+    font-size: 64px;
+    line-height: 1.05;
+    margin-top: 18px;
+    margin-bottom: 25px;
+    max-width: 700px;
+}
+
+.hero-section h1 span {
+    color: #f2b84b;
+}
+
+.hero-description {
+    max-width: 650px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #e6eee9;
+}
+
+.hero-buttons {
+    margin-top: 35px;
+}
+
+.donate-btn {
+    background-color: #f2b84b;
+    color: #173326;
+    padding: 13px 27px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.donate-btn:hover {
+    background-color: #dda83e;
+}
+
+.find-food-btn {
+    border: 1px solid white;
+    color: white;
+    padding: 13px 27px;
+    font-weight: bold;
+}
+
+.find-food-btn:hover {
+    background-color: white;
+    color: #174d32;
+}
+
+
+/* -------------------------
+   ABOUT
+-------------------------- */
+
+.about-section {
+    padding: 90px 0;
+}
+
+.section-label {
+    color: #d29b32;
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.about-section h2,
+.how-section h2 {
+    font-size: 38px;
+    color: #174d32;
+}
+
+.section-description {
+    max-width: 780px;
+    margin: 20px auto 0;
+    line-height: 1.8;
+    color: #68736c;
+}
+
+.mission-card {
+    height: 100%;
+    padding: 35px 25px;
+    border-radius: 12px;
+    background: #ffffff;
+    border: 1px solid #e5e9e6;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.card-number {
+    font-size: 30px;
+    color: #d5a03a;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.mission-card h4 {
+    color: #174d32;
+}
+
+.mission-card p {
+    color: #6b756f;
+    line-height: 1.7;
+}
+
+
+/* -------------------------
+   HOW IT WORKS
+-------------------------- */
+
+.how-section {
+    background-color: #f4f8f5;
+    padding: 90px 0;
+}
+
+.step-box {
+    padding: 30px;
+}
+
+.step-box span {
+    display: inline-flex;
+    width: 55px;
+    height: 55px;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #174d32;
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+.step-box h4 {
+    color: #174d32;
+}
+
+.step-box p {
+    color: #6b756f;
+    line-height: 1.7;
+}
+
+
+/* -------------------------
+   FOOTER
+-------------------------- */
+
+.site-footer {
+    background-color: #102f20;
+    color: #dce6df;
+    padding: 45px 0 30px;
+}
+
+.site-footer h5 {
+    color: white;
+}
+
+.site-footer p {
+    font-size: 14px;
+}
+
+.site-footer hr {
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* -------------------------
+   AUTH PAGES
+-------------------------- */
+
+.auth-section {
+    background-color: #f4f8f5;
+    min-height: 85vh;
+    padding: 70px 0;
+}
+
+.auth-card {
+    max-width: 550px;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 45px;
+    border-radius: 14px;
+    border: 1px solid #e2e7e3;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.auth-card h2 {
+    color: #174d32;
+    font-size: 34px;
+}
+
+.auth-subtitle {
+    color: #6b756f;
+}
+
+.auth-card .form-label {
+    font-weight: 600;
+    color: #26352b;
+}
+
+.auth-card .form-control,
+.auth-card .form-select {
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.auth-card .form-control:focus,
+.auth-card .form-select:focus {
+    border-color: #174d32;
+    box-shadow: 0 0 0 0.2rem rgba(23, 77, 50, 0.15);
+}
+
+.auth-btn {
+    background-color: #174d32;
+    color: white;
+    padding: 12px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.auth-btn:hover {
+    background-color: #103b26;
+    color: white;
+}
+
+.auth-bottom-text {
+    margin-top: 22px;
+    color: #6b756f;
+}
+
+.auth-bottom-text a {
+    color: #174d32;
+    font-weight: 600;
+    text-decoration: none;
+}

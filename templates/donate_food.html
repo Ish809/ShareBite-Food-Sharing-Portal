@@ -1,0 +1,158 @@
+{% extends "base.html" %}
+
+{% block title %}
+Donate Food | ShareBite
+{% endblock %}
+
+{% block content %}
+
+<section class="auth-section">
+
+    <div class="container">
+
+        <div class="auth-card">
+
+            <div class="text-center mb-4">
+
+                <p class="section-label">SHARE SURPLUS FOOD</p>
+
+                <h2>Donate Food</h2>
+
+                <p class="auth-subtitle">
+                    Add details of the food you would like to share.
+                </p>
+
+            </div>
+
+            <form method="POST">
+
+                <div class="mb-3">
+                    <label class="form-label">Food Name</label>
+
+                    <input
+                        type="text"
+                        name="food_name"
+                        class="form-control"
+                        placeholder="Example: Veg Biryani"
+                        required
+                    >
+                </div>
+
+
+                <div class="mb-3">
+                    <label class="form-label">Food Type</label>
+
+                    <select
+                        name="food_type"
+                        class="form-select"
+                        required
+                    >
+                        <option value="" selected disabled>
+                            Select food type
+                        </option>
+
+                        <option value="Vegetarian">
+                            Vegetarian
+                        </option>
+
+                        <option value="Non-Vegetarian">
+                            Non-Vegetarian
+                        </option>
+                    </select>
+                </div>
+
+
+                <div class="mb-3">
+                    <label class="form-label">Quantity</label>
+
+                    <input
+                        type="text"
+                        name="quantity"
+                        class="form-control"
+                        placeholder="Example: Food for 20 people"
+                        required
+                    >
+                </div>
+
+
+                <div class="mb-3">
+                    <label class="form-label">Pickup Location</label>
+
+                    <input
+                        type="text"
+                        name="location"
+                        class="form-control"
+                        placeholder="Enter pickup location"
+                        required
+                    >
+                </div>
+
+
+                <div class="row">
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+                            Pickup Date
+                        </label>
+
+                        <input
+                            type="date"
+                            name="pickup_date"
+                            class="form-control"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+                            Pickup Time
+                        </label>
+
+                        <input
+                            type="time"
+                            name="pickup_time"
+                            class="form-control"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="mb-3">
+
+                    <label class="form-label">
+                        Additional Details
+                    </label>
+
+                    <textarea
+                        name="description"
+                        class="form-control"
+                        rows="3"
+                        placeholder="Mention packaging, collection instructions, etc."
+                    ></textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn auth-btn w-100"
+                >
+                    Post Food Donation
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

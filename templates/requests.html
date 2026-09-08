@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% block title %}
+My Requests | ShareBite
+{% endblock %}
+
+{% block content %}
+
+<section class="about-section">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <p class="section-label">
+                FOOD REQUESTS
+            </p>
+
+            <h2>My Food Requests</h2>
+
+            <p class="section-description">
+                View the food donations you have requested.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            {% if requests %}
+
+                {% for item in requests %}
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="mission-card h-100">
+
+                        <h4>{{ item[1] }}</h4>
+
+                        <p>
+                            <strong>Food Type:</strong>
+                            {{ item[2] }}
+                        </p>
+
+                        <p>
+                            <strong>Quantity:</strong>
+                            {{ item[3] }}
+                        </p>
+
+                        <p>
+                            <strong>Pickup Location:</strong>
+                            {{ item[4] }}
+                        </p>
+
+                        <p>
+                            <strong>Pickup Date:</strong>
+                            {{ item[5] }}
+                        </p>
+
+                        <p>
+                            <strong>Pickup Time:</strong>
+                            {{ item[6] }}
+                        </p>
+
+                        <p>
+                            <strong>Request Status:</strong>
+
+                            <span class="badge bg-warning text-dark">
+                                {{ item[7] }}
+                            </span>
+                        </p>
+
+                    </div>
+
+                </div>
+
+                {% endfor %}
+
+            {% else %}
+
+                <div class="col-12 text-center">
+
+                    <div class="mission-card">
+
+                        <h4>No Requests Yet</h4>
+
+                        <p>
+                            Browse available food and request a donation.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

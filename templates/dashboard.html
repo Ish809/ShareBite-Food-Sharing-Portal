@@ -1,0 +1,181 @@
+{% extends "base.html" %}
+
+{% block title %}
+Dashboard | ShareBite
+{% endblock %}
+
+{% block content %}
+
+<section class="about-section">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <p class="section-label">
+                YOUR DASHBOARD
+            </p>
+
+            <h2>
+                Welcome, {{ session["fullname"] }}
+            </h2>
+
+            <p class="section-description">
+                Manage your ShareBite activities from here.
+            </p>
+
+        </div>
+
+        <div class="row justify-content-center g-4">
+
+
+            {% if session["role"] == "donor" %}
+
+            <div class="col-md-5">
+
+                <div class="mission-card text-center h-100">
+
+                    <div class="card-number">
+                        01
+                    </div>
+
+                    <h4>Donate Food</h4>
+
+                    <p>
+                        Share surplus food with NGOs and
+                        beneficiaries in your community.
+                    </p>
+
+                    <a
+                        href="{{ url_for('donate_food') }}"
+                        class="btn auth-btn"
+                    >
+                        Donate Food
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-5">
+
+                <div class="mission-card text-center h-100">
+
+                    <div class="card-number">
+                        02
+                    </div>
+
+                    <h4>Available Food</h4>
+
+                    <p>
+                        View food donations currently available
+                        on the ShareBite platform.
+                    </p>
+
+                    <a
+                        href="{{ url_for('food_list') }}"
+                        class="btn auth-btn"
+                    >
+                        View Food
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-5">
+
+                <div class="mission-card text-center h-100">
+
+                    <div class="card-number">
+                        03
+                    </div>
+
+                    <h4>Received Requests</h4>
+
+                    <p>
+                        View and manage requests made by NGOs
+                        for your food donations.
+                    </p>
+
+                    <a
+                        href="{{ url_for('received_requests') }}"
+                        class="btn auth-btn"
+                    >
+                        View Requests
+                    </a>
+
+                </div>
+
+            </div>
+
+            {% endif %}
+
+
+            {% if session["role"] == "ngo" %}
+
+            <div class="col-md-5">
+
+                <div class="mission-card text-center h-100">
+
+                    <div class="card-number">
+                        01
+                    </div>
+
+                    <h4>Available Food</h4>
+
+                    <p>
+                        Browse available surplus food and request
+                        food for your community.
+                    </p>
+
+                    <a
+                        href="{{ url_for('food_list') }}"
+                        class="btn auth-btn"
+                    >
+                        Find Food
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-5">
+
+                <div class="mission-card text-center h-100">
+
+                    <div class="card-number">
+                        02
+                    </div>
+
+                    <h4>My Requests</h4>
+
+                    <p>
+                        View all food donations you have requested
+                        and check their current status.
+                    </p>
+
+                    <a
+                        href="{{ url_for('my_requests') }}"
+                        class="btn auth-btn"
+                    >
+                        My Requests
+                    </a>
+
+                </div>
+
+            </div>
+
+            {% endif %}
+
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
